@@ -42,6 +42,13 @@ DHCP(CLIENTS)
 ![image](https://github.com/user-attachments/assets/743edb89-e1c2-4689-a99e-1fe84c1d32e7)
 
 
+![image](https://github.com/user-attachments/assets/a0b718dd-df1d-44c9-9087-666f8d5882ee)
+![image](https://github.com/user-attachments/assets/c5b01203-61f7-48d3-a479-d3db00748bf3)
+![image](https://github.com/user-attachments/assets/b27e3931-bfac-427a-99b7-651fd079499d)
+![image](https://github.com/user-attachments/assets/26d5f772-35ee-488d-bcdc-1c91faf055f0)
+![image](https://github.com/user-attachments/assets/5150698e-2c25-412e-8bb7-713c408b65f7)
+
+
 
 
 
