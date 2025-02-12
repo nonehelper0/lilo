@@ -1,3 +1,9 @@
+vi /usr/share/ideco/routing-backend/
+vi ospf.conf.template
+then, delete from ip prefix...
+to ip protocol ospf route-map DEFMAP
+then - restart frr
+
 ![image](https://github.com/user-attachments/assets/f15299de-a9bf-4e70-a2d4-7b9b0e340345)
 
 ![image](https://github.com/user-attachments/assets/b5ba29fc-31f7-4977-bd47-c74b623e782e)
@@ -31,6 +37,9 @@ STP:
 DHCP(CLIENTS)
 ![image](https://github.com/user-attachments/assets/84ab6585-268b-4da8-8a25-a978bc0ed4ac)
 ![image](https://github.com/user-attachments/assets/71dc36ee-42cb-425d-8663-3028b33bd98a)
+![image](https://github.com/user-attachments/assets/0e4f0acf-6e98-4ad6-b78e-8b490e02c623)
+![image](https://github.com/user-attachments/assets/743edb89-e1c2-4689-a99e-1fe84c1d32e7)
+
 
 
 
