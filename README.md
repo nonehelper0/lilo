@@ -23,3 +23,11 @@ R-DT :
 
 
 
+![image](https://github.com/user-attachments/assets/4464d9c8-bf6c-4ddc-8c9f-325eed7ca00c)
+![image](https://github.com/user-attachments/assets/960227ac-aceb-40ed-82de-caffed034713)
+STP:
+
+![image](https://github.com/user-attachments/assets/b11c0ec0-2fb3-4724-a950-015f91bdd5e2)
+
+
+
