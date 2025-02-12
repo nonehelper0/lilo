@@ -11,6 +11,15 @@
 ![image](https://github.com/user-attachments/assets/b1c13d11-bcca-4db2-800f-6b248314292e)
 ![image](https://github.com/user-attachments/assets/eff4b243-8f70-4732-bef5-137dfa787e23)
 ![image](https://github.com/user-attachments/assets/3357b5e9-5e8a-482a-9bd5-5e87805f29dd)
+![image](https://github.com/user-attachments/assets/49bd1879-b40d-4e2e-9b61-af960f21f886)
+![image](https://github.com/user-attachments/assets/2da69b37-67d5-4138-be64-ab68722cc4b9)
+![image](https://github.com/user-attachments/assets/346d220a-f0cf-414a-b56b-663694782524)
+![image](https://github.com/user-attachments/assets/f83b56ac-f68b-44cb-b06b-706cb94250c7)
+
+R-DT :
+- ip route 192.168.33.64/28 192.168.33.90
+- ip route 192.168.33.0/26 192.168.33.90
+- analog
 
 
 
