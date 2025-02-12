@@ -1,6 +1,7 @@
 vi /usr/share/ideco/routing-backend/
 vi ospf.conf.template
 then, delete from ip prefix...
+
 to ip protocol ospf route-map DEFMAP
 then - restart frr
 
