@@ -28,6 +28,10 @@ R-DT :
 STP:
 
 ![image](https://github.com/user-attachments/assets/b11c0ec0-2fb3-4724-a950-015f91bdd5e2)
+DHCP(CLIENTS)
+![image](https://github.com/user-attachments/assets/84ab6585-268b-4da8-8a25-a978bc0ed4ac)
+![image](https://github.com/user-attachments/assets/71dc36ee-42cb-425d-8663-3028b33bd98a)
+
 
 
 
