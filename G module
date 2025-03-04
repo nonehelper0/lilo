@@ -2,3 +2,29 @@ Terraform and proxy
 ssh-keygen -t rsa -b 2048
 Generating public/private sa key pair.
 KEnter file in which to save the key (/home/user/.ssh/id_rsa): /home/user/.ssh/id_cloud.pem
+
+ssh -i /home/user/.ssh/id_cloud.pem altlinux@192.168.102.X
+
+Ip route on cloud(router): 0.0.0.0 via 192.168.102.1
+
+scp /home/user/Загрузки/terraform_1.10.3_linux_amd54.zip altlinux@192.168. ...:/home/altlinux/ (копируем с компьютера на виртуальную машину, но возможно придется сначала скачать а потом копировать)
+4) scp /home/user/Рабочий\ стол/ca.root.crt altlinux@192.168. ...:/home/altlinux/ (копируем сертифика на виртуальную машину)
+На виртуальной машине:
+5) vim /etc/hosts -> 192.168. ... cyber-infra.rch25.prof.nao (вставляем)
+6) export https_proxy="http://10.0.83.52:3128/" (прокси для установки и выгрузки с terraform)
+
+
+wget https://hashicorp-releases.mcs.mail.ru/terraform/1.10.3/terraform_1.10.3_linux_amd64.zip --no-check-certificate
+sudo vim /etc/resolv.conf
+export http_proxy="http://10.0.83.52:3128/"
+wget https://hashicorp-releases.mcs.mail.ru/terraform/1.10.3/terraform_1.10.3_Zinux_amd64.zip --no-check-certificate
+wget https://hashicorp-releases.mcs.mail.ru/terraform/1.10.3/terraform_1.10.3_1tnux_amd64,zip
+wget https://hashicorp-releases.mcs.mail.ru/terraform/1.10.3/terraform_1.10.3_linux_amd64.zip --no-check-certificate
+export https_proxy="http://10.0.83.52:3128/"
+wget https://hashicorp-releases.mcs.mail.ru/terraform/1.10.3/terraform_1.10.3_linux_amd64.zip --no-check-certificate
+
+
+
+
+from root : cp /home/altlinux/ca.root.crt /etc/pki/ca-trust/source/anchors/
+update-ca-trust (добавляем сертификат)
