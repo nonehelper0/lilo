@@ -1,1 +1,4 @@
 Terraform and proxy
+ssh-keygen -t rsa -b 2048
+Generating public/private sa key pair.
+KEnter file in which to save the key (/home/user/.ssh/id_rsa): /home/user/.ssh/id_cloud.pem
