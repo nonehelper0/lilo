@@ -1,2 +1,41 @@
 внезапный микротик:
 
+1. Настройка IP-адреса на интерфейсе ether2
+Команды на MikroTik:
+Copy
+/ip address
+add address=10.0.0.1/24 interface=ether2
+
+
+Пояснение команд:
+/interface vlan — создает VLAN-интерфейсы на основе физического интерфейса ether1 с указанными VLAN-идентификаторами (vlan-id).
+
+vlan111 — VLAN с идентификатором 111.
+
+vlan222 — VLAN с идентификатором 222.
+
+vlan333 — VLAN с идентификатором 333.
+
+
+/interface vlan
+add name=vlan111 interface=ether1 vlan-id=111
+add name=vlan222 interface=ether1 vlan-id=222
+add name=vlan333 interface=ether1 vlan-id=333
+
+/ip address
+add address=192.168.33.1/26 interface=vlan111
+add address=192.168.33.65/28 interface=vlan222
+add address=192.168.33.81/29 interface=vlan333
+
+
+1. Настройка статических маршрутов
+Команды на MikroTik
+/ip route
+add dst-address=192.168.11.0/24 gateway=192.168.33.89
+add dst-address=192.168.11.64/26 gateway=192.168.33.89
+add dst-address=192.168.11.80/28 gateway=192.168.33.89
+
+
+/system ntp client
+set enabled=yes primary-ntp=192.168.11.66
+
