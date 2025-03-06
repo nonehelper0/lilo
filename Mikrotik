@@ -2,13 +2,13 @@
 /system identity
 set name=fw-dt.au.team 
 /ip dns static
-add name=fw-dt.au.team address=10.0.0.1
+add name=fw-dt.au.team address=10.0.0.2
 
 1. Настройка IP-адреса на интерфейсе ether2
 Команды на MikroTik:
 Copy
 /ip address
-add address=10.0.0.1/24 interface=ether2
+add address=10.0.0.2/24 interface=ether2
 
 
 Пояснение команд:
@@ -27,7 +27,7 @@ add name=vlan222 interface=ether1 vlan-id=222
 add name=vlan333 interface=ether1 vlan-id=333
 
 /ip address
-add address=192.168.33.1/26 interface=vlan111
+add address=10.100.190.1/26 interface=vlan111
 add address=192.168.33.65/28 interface=vlan222
 add address=192.168.33.81/29 interface=vlan333
 
@@ -39,15 +39,16 @@ add address=192.168.33.81/29 interface=vlan333
 
 Команды на MikroTik:
 /ip firewall nat
-add chain=srcnat src-address=192.168.33.0/24 out-interface=ether2 action=masquerade
+add chain=srcnat src-address=10.100.190.0/24 out-interface=ether2 action=masquerade
 
 
 1. Настройка статических маршрутов
 Команды на MikroTik
 /ip route
-add dst-address=192.168.11.0/24 gateway=192.168.33.89
-add dst-address=192.168.11.64/26 gateway=192.168.33.89
-add dst-address=192.168.11.80/28 gateway=192.168.33.89
+также в 0.0.0.0/0
+add dst-address=10.110.190.0/26 gateway=10.0.0.1(r-dt)
+add dst-address=192.168.11.64/28 gateway=192.168.33.89
+add dst-address=192.168.11.80/29 gateway=192.168.33.89
 
 
 /system ntp client
