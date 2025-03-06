@@ -1,4 +1,8 @@
 внезапный микротик:
+/system identity
+set name=fw-dt.au.team 
+/ip dns static
+add name=fw-dt.au.team address=10.0.0.1
 
 1. Настройка IP-адреса на интерфейсе ether2
 Команды на MikroTik:
@@ -27,6 +31,16 @@ add address=192.168.33.1/26 interface=vlan111
 add address=192.168.33.65/28 interface=vlan222
 add address=192.168.33.81/29 interface=vlan333
 
+Настройка NAT (Masquerade) на MikroTik
+Предположим:
+Внутренний интерфейс (где находится сеть 192.168.33.0/24) — ether1.
+
+Внешний интерфейс (подключенный к интернету) — ether2.
+
+Команды на MikroTik:
+/ip firewall nat
+add chain=srcnat src-address=192.168.33.0/24 out-interface=ether2 action=masquerade
+
 
 1. Настройка статических маршрутов
 Команды на MikroTik
@@ -38,4 +52,17 @@ add dst-address=192.168.11.80/28 gateway=192.168.33.89
 
 /system ntp client
 set enabled=yes primary-ntp=192.168.11.66
+
+Настройка DHCP-сервера для VLAN 111
+Команды на MikroTik:
+shell
+Copy
+/ip pool
+add name=dhcp-pool-vlan111 ranges=192.168.33.2-192.168.33.62
+
+/ip dhcp-server
+add name=dhcp-vlan111 interface=vlan111 address-pool=dhcp-pool-vlan111
+
+/ip dhcp-server network
+add address=192.168.33.0/26 gateway=192.168.33.1 dns-server=192.168.33.66 domain=au.team
 
