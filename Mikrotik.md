@@ -115,11 +115,18 @@ b) Напишите Dockerfile для приложения web.
 vim Dockerfile
 
 ![image](https://github.com/user-attachments/assets/3fa22d8e-fb48-42ed-9482-4e779adb424d)
+
+
+
 Выполняем сборку docker-образа:
 -t - позволяет присвоить имя собираемому образу;
 "." - говорит о том что Dockerfile находится в текущей директории откуда выполняется данная команда и имеет имя именно Dockerfile:
 docker build -t localhost:5000/web:1.0 .
+
+
 docker push localhost:5000/web:1.0
+
+
 docker run -d -p 80:80 --restart=always --name web localhost:5000/web:1.0
 
 
