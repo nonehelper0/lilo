@@ -127,6 +127,11 @@ docker build -t localhost:5000/web:1.0 .
 docker push localhost:5000/web:1.0
 
 
+![image](https://github.com/user-attachments/assets/146a1716-1249-4495-ba2e-e16baec82393)
+
+
+
+
 docker run -d -p 80:80 --restart=always --name web localhost:5000/web:1.0
 
 
